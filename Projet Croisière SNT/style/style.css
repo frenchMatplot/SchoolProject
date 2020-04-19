@@ -1,0 +1,278 @@
+/* Set constants*/
+body {
+  --main-color: #2E2224;
+  --main-backgroung-color: white;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #000; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: var(--main-backgroung-color);
+  padding: 20px 10px;
+  top: 0px;
+  width: 80%;
+  border-radius: 15px;
+}
+
+.header:hover {
+  box-shadow: 0 5px 10px var(--main-color);
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: var(--main-color);
+  text-align: center;
+  padding: 12px;
+  text-decoration: underline overline var(--main-color);
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  font-family:Jazz LET, fantasy;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  color: var(--main-color);
+  /*font-weight: bold;*/
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+/* tried to set it to all the css classes but it was t hard ;)*/
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+/* Set the bloc to be center */
+.explain-process{
+  width: 30%;
+  height: 12%;
+  margin-top: 5%; 
+  margin-left: 35%;
+  border-radius: 15px;
+  color: var(--main-color);
+}
+/* Set the h2's aspect*/
+.explain-process > h2{
+  font-size: 20px;
+  margin: 10px;
+  font-family:Jazz LET, fantasy;
+  color: var(--main-color);
+  text-decoration: underline overline;
+}
+
+/* Set the p's aspect*/
+.explain-process > p {
+  font-size: 15px;
+  margin: 10px;
+  font-style: italic;
+  text-align: justify;
+}
+
+/* setting the link to hidden*/
+
+.explain-process > p > a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+/* This is most important bloc. Here we're applying the box shadow effect found on csstrick.com ans setting his aspect*/
+
+.container{
+  width: 40%;
+  height: 300px;
+  float: left;
+  background-color: var(--main-backgroung-color);
+  align-items: center;
+  margin: 10px;
+  /*border: 2px solid var(--main-color);*/
+  -webkit-box-shadow: 0 35px 20px var(--main-color);
+  -moz-box-shadow: 0 35px 20px  var(--main-color);
+  box-shadow: 0 35px 20px  var(--main-color);
+
+}
+
+/* Set the aside bloc to be "aside" */
+
+aside{
+  top: 4px;
+  width: 20%;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 8px;
+  float: right;
+  /*box-shadow: inset 5px 0 5px -5px var(--main-color);*/
+  font-style: italic; 
+  color: var(--main-color);
+  text-align: justify;
+}
+
+/* Setting the details aspect*/
+
+details{
+  margin-top: 4%;
+  margin-left: 2%;
+  width: 70%;
+  padding: 5px 5px;
+  height: 200px;
+  overflow: auto;
+}
+
+/* Applying a black color the scroll bar to belong to the page aspect*/
+
+details::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--main-backgroung-color); 
+}
+
+details::-webkit-scrollbar-thumb {
+    background: #000; 
+}
+
+/* Setting the summary aspect*/
+summary{
+  font-family:Jazz LET, fantasy;
+  color: var(--main-color);
+  outline-style: none;
+  text-decoration: underline overline;
+  font-size: 20px;
+}
+
+/* Setting the image to be center */
+
+img {
+  margin-left: 15%;
+  width: 70%;
+  height: 70%;
+}
+
+/* Setting the figcaption to be */
+
+figcaption {
+  width: 70%;
+  margin-left: 15%;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+}
+
+/* Positionning the bloc1 on the left and rotating it*/
+
+#bloc1{
+  margin-top: 5%;
+  margin-left: 15%;
+  /*box-shadow: 50px -10px var(--main-color);*/
+  border-top-left-radius:15px;
+  border-top-right-radius: 1px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+
+/* Positionning the bloc 2 on the right 
+  Nota bene: I used the ids bloc1 & bloc2 as classes, I should define it correctly next time;
+*/
+
+#bloc2{
+  margin-top: 5%;
+  margin-left: 40%;
+  /*box-shadow: -50px -10px var(--main-color);*/
+  border-top-left-radius: : 1px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+
+/* Positionnning the aside to be center (I tried)*/
+
+#bloc2 > aside {
+  margin-top: 10%;
+}
+
+/* Setting the bloc to be */
+
+.total {
+  height: auto;
+  padding-top: 8px;
+  padding-left: 8px; 
+  border-radius: 15px;
+  margin-top: 40px;
+  margin-left: 100px;
+  float: center;
+}
+
+.total > h2 {
+  text-decoration: underline overline var(--main-color);
+  font-family: Jazz LET, fantasy;
+}
+
+.total > h3 {
+  margin-left: 20px;
+  margin-top: 5px;
+  text-decoration: underline;
+  font-family: Jazz LET, fantasy;
+}
+
+.total > h3:hover {
+  text-decoration: underline overline;
+}
+
+.total > p {
+  font-style: italic;
+  margin-left: 40px;
+  text-align: justify;
+}
+
+/*------------------------------------------------
+    MADE BY VALENTIN GIRARD ABOUT 5H OF WORK
+  ------------------------------------------------
+
+  NOTA BENE :
+    I HOPED HAVE THE TIME TO MAKE IT RESPONSIVE - VISABLE TO SMALL SCREENS - BUT I DIDNT  
+*/
+
